@@ -27,7 +27,7 @@ app.use(permissions);
 app.use(vacations);
 
 
-
+//connect to heroku
 if(process.env.NODE_ENV === 'production'){
     console.log(process.env.NODE_ENV);
     app.use(express.static('hotels-front/build'));
