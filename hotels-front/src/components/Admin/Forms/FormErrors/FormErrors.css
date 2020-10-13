@@ -1,0 +1,22 @@
+.FormHeader{
+    margin: auto;
+    color: red;
+    margin-bottom: 15px;
+}
+
+.FormTable{
+    margin: auto;
+    width: 90%;
+}
+
+.FormTable td{
+    text-align: left;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+}
+
+.FormTable th{
+    text-align: center;
+    border: 1px solid #ccc;
+    font-weight: bold;
+}

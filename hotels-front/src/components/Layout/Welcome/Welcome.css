@@ -1,0 +1,59 @@
+.adv{
+    background-color: rgba(54, 52, 53,0.2);
+    border:none
+}
+
+.headline{
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255,0.1);
+    border:none
+}
+.icons{
+    max-width: 100px;
+}
+
+.forget{
+    color:blue
+}
+
+.card{ 
+    max-width: 800px;
+}
+
+.card-body{
+    padding-bottom: 5px;
+}
+
+.sec .card-body{
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.adv .card-body{
+    text-align: center;
+    height: 230px;
+}
+
+@media (max-width: 500px) {
+
+    .adv .card-title{
+        font-size: small;
+    }
+
+    .adv .card-body{
+        height: 150px;
+        padding: 2px;
+    }
+
+    .card-wrap{
+        width: 30%;
+    }
+
+    .icons{
+        width: 70%;
+    }
+
+    .headline.sec{
+        margin-top:2px;
+    }
+}

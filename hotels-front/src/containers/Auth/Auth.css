@@ -1,0 +1,44 @@
+.Auth {
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 2px 3px #ccc;
+    border: 1px solid #eee;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color:rgb(54, 52, 53);
+}
+
+.authSuccess{
+    background-color:goldenrod;
+    transition-duration: 0.4s;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.authSwitch{
+    background-color: salmon;
+    transition-duration: 0.4s;
+}
+
+.authSwitch:hover {
+    background-color: firebrick;
+    color: white;
+}
+
+.authSuccess:hover {
+    background-color:gold; 
+    color: white;
+}
+
+.error{
+    color: red;
+}
+hr{
+    border-bottom: 2px solid gold
+}
+@media (min-width: 600px) {
+    .Auth {
+        width: 500px;
+    }
+}

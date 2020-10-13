@@ -1,0 +1,59 @@
+.Tbl{
+    width: 80%;
+    background-color: lavenderblush;
+    box-sizing: border-box;
+    margin: auto;
+    border-collapse: separate;
+}
+
+.Tbl th {
+    background-color: rgb(54, 52, 53);
+    color: gold;
+}
+
+.Tbl thead, .Tbl tbody{
+    width: 100%;
+}
+
+.TblTdBtn {
+    text-align: center;
+}
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 380px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+    margin-top: 16px;
+}
+
+.edit{
+    background-color:rgb(54, 52, 53);
+    color:gold;
+    transition-duration: 0.4s;
+}
+
+.edit:hover {
+    background-color:gold; 
+    color:black;
+}
+
+.delete {
+    background-color: salmon;
+    transition-duration: 0.4s;
+}
+
+.delete:hover {
+    background-color: firebrick;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .Tbl {
+        display: block;
+        overflow-x: auto;
+    }
+}

@@ -1,0 +1,22 @@
+.wn-footer {
+    padding: 1rem 1rem;
+    text-align: center;
+    color: white;
+    background-color: #535A53;
+    border-top: .05rem solid #e5e5e5;
+    max-height: 3rem;
+}
+
+.paral {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+}
+
+.paralsec {
+    /* background-image: url("./../../assets/background3.jpg"); */
+    background-color: lightgrey;
+}

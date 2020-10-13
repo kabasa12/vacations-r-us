@@ -1,0 +1,106 @@
+.Header{
+    margin: auto;
+    padding-top: 10px;
+    color: orangered;  
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    width: 100%;
+    margin: 15px;
+    background-color:  rgb(54, 52, 53);
+}
+
+.form-container{
+    box-shadow: 0 2px 3px #ccc;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.topForm .col-md-6{
+    text-align: center;
+    background-color: rgb(54, 52, 53);
+}
+
+.topForm .col-md-10{
+    text-align: center;
+    background-color: rgb(54, 52, 53);
+}
+.InputLable{
+    margin: 0px 10px;
+    font-size: 25px;
+    text-align: center;
+    vertical-align: middle;
+    color: gold;
+}
+
+.check-container {
+  text-align: left;
+  margin: 15px;
+}
+
+#show{
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    vertical-align: middle;
+    position: relative; 
+}
+
+#image{
+    color: white;
+}
+
+.topForm input {
+    width: 80%;
+    outline: none;
+}
+#show_vacation{
+    width: fit-content;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.buttons .btn{
+    width: 5rem;
+}
+
+.Cancelled {
+    background-color: salmon;
+    transition-duration: 0.4s;
+}
+
+.Success{
+    background-color:goldenrod;
+    transition-duration: 0.4s;
+}
+
+.Cancelled:hover {
+    background-color: firebrick;
+    color: white;
+}
+
+.Success:hover {
+    background-color:gold; 
+    color: white;
+}
+
+.topForm{
+    margin-top: 16px;
+}
+@media (max-width: 500px) {
+    .input-container {
+        display: block;
+        margin: auto;
+    }
+    
+    .form-container{
+        margin-left: 15px;
+    }
+}
