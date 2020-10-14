@@ -14,6 +14,7 @@ exports.getVacations = async (req, res, next) => {
                                         FROM vacations v WHERE v.show_vacation = 1
                                         ORDER BY follow DESC`);
         vacations = vacations[0];
+        console.log(vacations)
     } catch (err) {
         vacations = err.message;
     }
@@ -35,7 +36,7 @@ exports.getAllVacations = async (req, res, next) => {
                                         v.num_of_followers,v.show_vacation,v.last_updated_date 
                                     FROM vacations v ORDER BY id`);
         vacations = vacations[0];
-
+        console.log(vacations)
     } catch (err) {
         vacations = err.message;
     }
