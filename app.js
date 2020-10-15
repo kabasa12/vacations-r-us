@@ -20,6 +20,7 @@ const auth = require('./routes/auth');
 const users = require('./routes/users');
 const permissions = require('./routes/permissions');
 const vacations = require('./routes/vacations');
+const PORT = process.env.PORT || 5000;
 
 app.use(auth);
 app.use(users);
@@ -40,4 +41,4 @@ if(process.env.NODE_ENV === 'production'){
     })
 }
 
-app.listen(process.env.PORT || 5201);
+app.listen(PORT);
