@@ -37,7 +37,7 @@ if(process.env.NODE_ENV === 'production'){
     })
 }else{
     app.use((req, res) => {
-        res.send('<h1>Page  not found</h1>')
+        res.send('<h1>Page not found</h1>')
     })
 }
 
