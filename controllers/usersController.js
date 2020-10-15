@@ -10,8 +10,8 @@ exports.getUsers = async (req, res, next) => {
 
     let users = [];
     try {
-        users = await con.execute(`SELECT * FROM users`);
-        users = users[0];
+        users = await con (`SELECT * FROM users`);
+        //users = users[0];
 
         response.success = true;
         response.data = users;
@@ -28,8 +28,8 @@ exports.getUserById = async (req, res, next) => {
     let id = req.query.id;
     let user = [];
     try {
-        user = await con.execute(`SELECT * FROM users WHERE id = "${id}"`);
-        user = user[0];
+        user = await con (`SELECT * FROM users WHERE id = "${id}"`);
+        //user = user[0];
     } catch (err) {
         user = err.message;
     }
@@ -50,15 +50,15 @@ exports.getUserByEmail = async (req, res, next) => {
     const user_id = req.query.user_id;
 
     role = await RoleService.getRoleByUserId(user_id);
-    role = role[0];
+    //role = role[0];
     if (role !== 'Admin') return res.sendStatus(403);
     
     let email = req.query.email;
 
     let user = [];
     try {
-        user = await con.execute(`SELECT * FROM users WHERE email = "${email}"`);
-        user = user[0];
+        user = await con (`SELECT * FROM users WHERE email = "${email}"`);
+        //user = user[0];
     } catch (err) {
         user = err.message;
     }
@@ -68,8 +68,8 @@ exports.getUserByEmail = async (req, res, next) => {
 exports.getUserByEmailLogin = async (email) => {
     let user = [];
     try {
-        user = await con.execute(`SELECT * FROM users WHERE email = "${email}"`);
-        user = user[0];
+        user = await con (`SELECT * FROM users WHERE email = "${email}"`);
+        //user = user[0];
         return user;
     } catch (err) {
         user = err.message;
@@ -80,9 +80,9 @@ exports.getUserByEmailLogin = async (email) => {
 exports.insertUserSignUp = async (user) => {
     let u = []
     try {
-        u = await con.execute("INSERT INTO users (first_name,last_name,email,password,role_id) VALUES (?,?,?,?,?)",
+        u = await con ("INSERT INTO users (first_name,last_name,email,password,role_id) VALUES (?,?,?,?,?)",
                               [user.first_name,user.last_name,user.email,user.password,user.role_id])
-        u = u[0];
+        //u = u[0];
         
         return u;
     } catch (err) {
@@ -103,9 +103,9 @@ exports.insertUser = async (req, res, next) => {
 
     let u = []
     try {
-        u = await con.execute("INSERT INTO users (first_name,last_name,email,password,role_id) VALUES (?,?,?,?,?)",
+        u = await con ("INSERT INTO users (first_name,last_name,email,password,role_id) VALUES (?,?,?,?,?)",
                               [user.first_name,user.last_name,user.email,user.password,user.role_id])
-        u = u[0];
+        //u = u[0];
     } catch (err) {
         u = err.message;
     }
@@ -125,13 +125,13 @@ exports.updateUserByid = async (req, res, next) => {
 
     let u = []
     try {
-        u = await con.execute(`UPDATE users 
+        u = await con (`UPDATE users 
                                SET first_name=?,last_name=?,
                                email=?,password=?,
                                role_id=?
                                WHERE id = ${id}`,
                                [user.first_name,user.last_name,user.email,user.password,user.role_id])
-        u = u[0];
+        //u = u[0];
     } catch (err) {
         u = err.message;
     }
@@ -155,9 +155,10 @@ exports.getStatistics = async (req, res) => {
                     GROUP BY v.id`
 
     try {
-        const stat = await con.execute(query)
+        const stat = await con (query)
 
-        response.data = stat[0];
+        response.data = stat;
+        //response.data = stat[0];
         response.success = true;
         code = 201;
         console.log(response)
